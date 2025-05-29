@@ -1,3 +1,17 @@
+// Preloader functionality
+window.addEventListener('load', function() {
+    const preloader = document.querySelector('.preloader');
+    
+    // Add slight delay for better UX
+    setTimeout(function() {
+        preloader.style.opacity = '0';
+        
+        // Remove preloader from DOM after fade out
+        setTimeout(function() {
+            preloader.style.display = 'none';
+        }, 500);
+    }, 1000); // 1 second delay
+});
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile menu toggle
     const hamburger = document.querySelector('.hamburger');
